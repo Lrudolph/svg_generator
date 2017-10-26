@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Content="Geometrie"/>
+        <ComboBox x:Name="geometry_selection" Grid.Column="1">
+            <ComboBoxItem Content="Quader"/>
+            <ComboBoxItem Content="Zylinder"/>
+        </ComboBox>
+        <Label Grid.Column="0" Grid.Row="1" Content="X"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Y"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="Z"/>
+        <TextBox x:Name="width_box" Grid.Column="1" Grid.Row="1" Text="100"></TextBox>
+        <TextBox x:Name="height_box" Grid.Column="1" Grid.Row="2" Text="100"></TextBox>
+        <TextBox x:Name="length_box"  Grid.Column="1" Grid.Row="3" Text="100"></TextBox>
+        <Button Grid.Column="1" Grid.Row="5" Content="Generiere SVG..." Click="Button_Click"/>
+    </Grid>
+</Window>
